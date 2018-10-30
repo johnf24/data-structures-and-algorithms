@@ -10,6 +10,6 @@ Python 2.7.13
 
 ### Installation Instructions
 
-1.)	Download Python</br>
-2.)     Clone Data Structures Project repository</br>
-3.)     In terminal run the file with command python file-name.py</br>
+1. Download Python</br>
+2. Clone Data Structures Project repository</br>
+3. In terminal run the file with command python file-name.py</br>
