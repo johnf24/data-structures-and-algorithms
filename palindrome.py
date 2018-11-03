@@ -1,6 +1,6 @@
 
-'''A double-ended queue where the addition or removal of items happens at the front or the rear.
-The output should be True, string, 4, 2'''
+'''An algorithm where a string of characters is inputed is checked whether it is a palindrome
+or a word that reads the same forward or backwards. The output should be False, True'''
 
 class Deque:
     def __init__(self): #Assigns values to the object properties of the class
@@ -24,12 +24,23 @@ class Deque:
     def count(self): #Returns number of items in the stack
         return len(self.items)
 
-d = Deque() #Accsesses class
-print(d.empty()) #Calls empty method
-d.addRear(1) #Calls addRear method
-d.addRear('string')
-d.addFront(3) #Calls addFront method
-d.addFront(4)
-print(d.removeRear()) #Calls removeRear method
-print(d.removeFront())
-print(d.count()) #Calls count method
+
+def palChecker(string): #Checks Palindrome
+    check = Deque()
+
+    for i in string: #For loop
+        check.addRear(i)
+
+    while check.count() > 1: #While loop
+        first = check.removeFront() #Calls removeFront method
+        last = check.removeRear() #Calls removeRear method
+        if first != last: #Conditional
+            equal = False
+        elif first == last:
+            equal = True
+
+    return equal
+
+
+print(palChecker('fjybsk'))
+print(palChecker('radar'))
