@@ -36,7 +36,7 @@ def palChecker(string): #Checks Palindrome
         last = check.removeRear() #Calls removeRear method
         if first != last: #Conditional
             equal = False
-        elif first == last:
+        else first == last:
             equal = True
 
     return equal
